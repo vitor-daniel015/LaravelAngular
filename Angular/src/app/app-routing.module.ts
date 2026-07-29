@@ -10,7 +10,19 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },  {
+    path: 'brasil',
+    loadChildren: () => import('./brasil/brasil.module').then( m => m.BrasilPageModule)
+  },
+  {
+    path: 'india',
+    loadChildren: () => import('./india/india.module').then( m => m.IndiaPageModule)
+  },
+  {
+    path: 'china',
+    loadChildren: () => import('./china/china.module').then( m => m.ChinaPageModule)
   }
+
 ];
 
 @NgModule({
