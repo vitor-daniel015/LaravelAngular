@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
-
 import { HomePageRoutingModule } from './home-routing.module';
 import { IncrementerModule } from '../shared/components/increment/incrementer.module';
+import { MenuModule } from '../shared/components/menu/menu.module';
 
 
 @NgModule({
@@ -14,7 +14,8 @@ import { IncrementerModule } from '../shared/components/increment/incrementer.mo
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
-    IncrementerModule
+    IncrementerModule,
+    MenuModule
   ],
   declarations: [HomePage]
 })
