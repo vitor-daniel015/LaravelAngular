@@ -13,9 +13,6 @@ class ContatoModelSeeder extends Seeder
      */
     public function run(): void
     {
-        $contato = new ContatoModel();
-        $contato->nome = 'Diogo';
-        $contato->email = 'Diogo@email.com';
-
+        ContatoModel::factory()->count(100)->create();
     }
 }

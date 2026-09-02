@@ -15,7 +15,7 @@ use App\Http\Middleware\LogAcessoMiddleware;
 
 Route::get('/', [App\Http\Controllers\Principal::class, 'principal']);
 
-Route::get('/contato', [App\Http\Controllers\ContatoController::class, 'contato']);
+Route::get('/contato', [App\Http\Controllers\ContatoController::class, 'contato'])->middleware(LogAcessoMiddleware::class);
 
 Route::prefix('/aluno')->group(function () {
     Route::get('/index', [App\Http\Controllers\AlunoController::class, 'index'])->name('aluno.index');

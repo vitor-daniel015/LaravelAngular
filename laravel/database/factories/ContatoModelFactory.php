@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
  */
-class ContatoModelFactotyFactory extends Factory
+class ContatoModelFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +17,8 @@ class ContatoModelFactotyFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            "nome" => $this->faker->name,
+            "email" => $this->faker->unique()->safeEmail
         ];
     }
 }
