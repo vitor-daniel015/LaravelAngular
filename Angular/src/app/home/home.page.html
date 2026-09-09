@@ -1,7 +1,7 @@
 <ion-content [fullscreen]="true">
 
-    <ion-button color="secondary" (click)="this.listarProdutos()">Buscar Produtos</ion-button>
-
+    <ion-button color="primary" class="botao" (click)="this.listarProdutos()">Buscar Produtos</ion-button>
+<ion-card>
     <ion-list>
         <ng-container *ngFor="let produto of this.produtos">
             <ion-item>
@@ -9,11 +9,12 @@
                     <h1>Nome: {{ produto.nome }}</h1>
                     <h3>Preço: {{ produto.preco }}</h3>
                 </ion-label>
-                <ion-icon name="trash-outline" slot="start"></ion-icon>
-                <ion-icon name="create-outline" slot="start"></ion-icon>
+                <ion-icon name="trash-outline" slot="end" (click)="this.removerProduto(produto.id)" class="excluir"> </ion-icon>
+                <ion-icon name="create-outline" slot="end"></ion-icon>
             </ion-item>
         </ng-container>
     </ion-list>
+</ion-card>
 
 
 </ion-content>

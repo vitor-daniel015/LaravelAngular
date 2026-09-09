@@ -1,0 +1,10 @@
+.botao {
+    align-items: center;
+    justify-items: center;
+    display: flex;
+}
+.excluir:hover {
+    cursor: pointer;
+    color: rgb(32, 32, 102);
+    transition: all;
+}
